@@ -23,8 +23,6 @@ public class PlaceListFragment extends ListFragment implements
 
     private ListAdapter mAdapter;
 
-    // List<Place> mPlaces;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.list, container, false);
@@ -67,36 +65,11 @@ public class PlaceListFragment extends ListFragment implements
         // 画面を更新する
         mAdapter.swapCursor(cursor);
         mAdapter.notifyDataSetChanged();
-        // Cursor old = mAdapter.swapCursor(cursor);
-        // if (old != null) {
-        // old.close();
-        // }
-        // if (cursor.getCount() == 0) {
-        // mPlaces = null;
-        // return;
-        // }
-        // mPlaces = new ArrayList<Place>();
-        // if (cursor.moveToFirst()) {
-        // do {
-        // Place place = new Place();
-        // place.setID(cursor.getInt(0));
-        // place.setPlaceID(cursor.getString(1));
-        // place.setPlace(cursor.getString(2));
-        // place.setUrl(cursor.getString(3));
-        // // Adding to list
-        // mPlaces.add(place);
-        // } while (cursor.moveToNext());
-        // }
-        //
     }
 
     @Override
     public void onLoaderReset(Loader<Cursor> loader) {
         mAdapter.swapCursor(null);
-        // Cursor old = mAdapter.swapCursor(null);
-        // if (old != null) {
-        // old.close();
-        // }
     }
 
 }

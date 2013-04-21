@@ -75,11 +75,6 @@ public class ListAdapter extends CursorAdapter {
         holder.place = (TextView) view.findViewById(R.id.place);
         holder.url = (TextView) view.findViewById(R.id.url);
 
-        // holder.id.setTextColor(Color.BLUE);
-        // holder.place_id.setTextColor(Color.MAGENTA);
-        // holder.place.setTextColor(Color.GREEN);
-        // holder.url.setTextColor(Color.CYAN);
-
         view.setTag(holder);
 
         return view;
